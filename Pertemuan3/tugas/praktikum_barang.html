@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <script>
+        function previewImage(event) {
+            var image = document.getElementById('imagePreview');
+            image.src = URL.createObjectURL(event.target.files[0]);
+            image.style.display = 'block';
+            document.getElementById('placeholder').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <h2 style="text-align: center;">Order Form</h2>
+
+    <div style="display: flex; max-width: 900px; margin: auto; padding: 20px; border: 1px solid #ccc;">
+        <div style="flex: 1; padding-right: 20px;">
+            <div id="placeholder" style="width: 100%; padding-top: 75%; background-color: #f0f0f0; position: relative;">
+                <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #888;"></p>
+            </div>
+
+            <img id="imagePreview" src="" alt="Image Preview" style="width: 100%; display: none; margin-bottom: 10px;">
+
+            <label for="picture" style="display: block; margin-top: 10px;">Upload Image:</label>
+            <input type="file" id="picture" name="picture" accept="image/*" onchange="previewImage(event)" style="width: 100%; padding: 8px; margin-bottom: 20px;">
+        </div>
+
+        <div style="flex: 2;">
+            <form style="width: 100%;">
+                <label for="itemName" style="display: block; margin-bottom: 10px;">Nama Barang:</label>
+                <input type="text" id="itemName" name="itemName" style="width: 100%; padding: 8px; margin-bottom: 20px;">
+
+                <label for="description" style="display: block; margin-bottom: 10px;">Deskripsi Barang:</label>
+                <textarea id="description" name="description" rows="4" style="width: 100%; padding: 8px; margin-bottom: 20px;"></textarea>
+
+                <label for="accountNumber" style="display: block; margin-bottom: 10px;">Account Number:</label>
+                <input type="number" id="accountNumber" name="accountNumber" style="width: 100%; padding: 8px; margin-bottom: 20px;">
+
+                <label for="bank" style="display: block; margin-bottom: 10px;">Bank:</label>
+                <input type="text" id="bank" name="bank" style="width: 100%; padding: 8px; margin-bottom: 20px;">
+
+                <label for="transaction" style="display: block; margin-bottom: 10px;">Transaction Amount:</label>
+                <input type="number" id="transaction" name="transaction" style="width: 100%; padding: 8px; margin-bottom: 20px;">
+
+                <label style="display: block; margin-bottom: 10px;">
+                    <input type="checkbox" id="sendMobile" name="sendMobile"> Send Mobile Number
+                </label>
+                <label style="display: block; margin-bottom: 10px;">
+                    <input type="checkbox" id="sendEmail" name="sendEmail"> Send Email
+                </label>
+
+                <label for="mobile" style="display: block; margin-bottom: 10px;">Mobile Phone:</label>
+                <input type="tel" id="mobile" name="mobile" style="width: 100%; padding: 8px; margin-bottom: 20px;">
+
+                <label for="email" style="display: block; margin-bottom: 10px;">Email:</label>
+                <input type="email" id="email" name="email" style="width: 100%; padding: 8px; margin-bottom: 20px;">
+
+                <button type="submit" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none;">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

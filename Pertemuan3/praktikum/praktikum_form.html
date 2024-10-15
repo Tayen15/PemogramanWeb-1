@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Form</title>
+</head>
+<body>
+     <fieldset>
+          <legend>Form Pesan Pizza</legend>
+          <h1>Selamat Datang Di Domino's Pizza</h1>
+          <p>Silahkan isi pesanan anda disini!</p>
+          
+          <form action="praktikum_pesanan.html">
+               <table>
+                    <thead>
+                         <tr>
+                              <td>Informasi Anda</td>
+                         </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                              <td><label for="name">Nama :</label></td>
+                              <td><input type="text" name="name" id="name" required></td>
+                         </tr>
+                         <tr>
+                              <td><label for="address">Alamat :</label></td>
+                              <td><input type="text" name="address" id="address" required></td>
+                         </tr>
+                         <tr>
+                              <td><label for="telpon">No. Telepon :</label></td>
+                              <td><input type="number" name="telpon" id="telpon" required></td>
+                         </tr>
+                         <tr>
+                              <td><label for="email">Email :</label></td>
+                              <td><input type="email" name="email" id="email" required></td>
+                         </tr>
+                         <tr>
+                              <td><label for="note">Note Pemesanan :</label></td>
+                              <td><textarea name="note" id="note"  placeholder="Tidak lebih dari 400 karakter"></textarea></td>
+                         </tr>
+                    </tbody>
+               </table>
+               <h4>Pilih salah satu</h4>
+               <label for="crust">Crust :</label><br>
+
+               <input type="radio" name="crust" id="cs" value="cs">
+               <label for="cs">Classic White</label>
+
+               <input type="radio" name="crust" id="mg" value="mg">
+               <label for="mg">Multigrain</label>
+
+               <input type="radio" name="crust" id="csc" value="csc">
+               <label for="csc">Cheese-stuffed crust</label>
+
+               <input type="radio" name="crust" id="gf" value="gf">
+               <label for="gf">Gluten-free</label><br>
+
+               <label for="">Topping (Pilih Lebih dari 1)</label><br>
+               <input type="checkbox" name="toppings" id="" value="rs">Red Sauce
+               <input type="checkbox" name="toppings" id="" value="ws">White Sauce
+               <input type="checkbox" name="toppings" id="" value="ms">Mozarella Sauce
+               <input type="checkbox" name="toppings" id="" value="pep">Pepperoni
+               <input type="checkbox" name="toppings" id="" value="mr">Mushrooms
+               <input type="checkbox" name="toppings" id="" value="prs">Peppers
+               <input type="checkbox" name="toppings" id="" value="anc">Anchovies
+
+               <h4>Number</h4>
+               <label for="number">Jumlah Pizza :</label>
+               <input type="number" name="number" id="number" min="1" max="10"><br><br>
+
+               <button type="submit" name="submit">Pesan Sekarang</button>
+               <button type="reset">Reset Pesanan</button>
+          </form>
+     </fieldset>
+</body>
+</html>

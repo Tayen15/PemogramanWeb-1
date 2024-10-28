@@ -34,6 +34,67 @@
                 background-color: black;
             }
 
+            /* Styling untuk list */
+            h3 {
+                color: #2e8b57;
+                text-align: left;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            ol {
+                padding-left: 20px;
+                margin: 0;
+                counter-reset: list-counter;
+            }
+
+            ol li {
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 8px;
+                font-size: 16px;
+                line-height: 1.6;
+                list-style-type: none;
+                color: #333;
+            }
+
+            ol li::before {
+                content: counter(list-counter) ".";
+                counter-increment: list-counter;
+                position: absolute;
+                left: 0;
+                color: #2e8b57; 
+                font-weight: bold;
+            }
+
+            .table-container {
+                padding: 5px;
+                border-radius: 10px; 
+                margin-bottom: 15px;
+            }
+
+            .table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .table th, .table td {
+                padding: 10px;
+                text-align: left;
+            }
+
+            .table th {
+                background-color: rgb(91, 155, 212); 
+            }
+
+            .table tr:nth-child(even) {
+                background-color: rgb(222, 234, 246); 
+            }
+
+            .table tr:nth-child(odd) {
+                background-color: #ffffff;
+            }
+
             .foto img {
                 width: 23%;
             }
@@ -111,6 +172,49 @@ Daerah penghasil alpukat adalah Jawa Barat,Jawa Timur, sebagian Sumatera, Sulawe
             </ol>
         </p>
 
+        <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Jenis Alpukat</th>
+                  <th>Harga 1 Kg</th>
+                  <th>Harga 2 Kg</th>
+                  <th>Harga 3 Kg</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Alpukat Mentega</td>
+                  <td>Rp. 35.000,-</td>
+                  <td>Rp. 65.000,-</td>
+                  <td>Rp. 90.000,-</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Alpukat Miki</td>
+                  <td>Rp. 50.000,-</td>
+                  <td>Rp. 90.000,-</td>
+                  <td>Rp. 135.000,-</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Alpukat Aligator</td>
+                  <td>Rp. 30.000,-</td>
+                  <td>Rp. 55.000,-</td>
+                  <td>Rp. 80.000,-</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Alpukat Kendil</td>
+                  <td>Rp. 40.000,-</td>
+                  <td>Rp. 75.000,-</td>
+                  <td>Rp. 100.000,-</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
 
         <div class="foto">
             <img src="images/alpukat_miki.png" alt="alpukat miki"/>
@@ -120,12 +224,12 @@ Daerah penghasil alpukat adalah Jawa Barat,Jawa Timur, sebagian Sumatera, Sulawe
         </div>
         <div class="promo">
             <h2>Anda ingin Buah Alpukat?, <br/>Penawaran Khusus Bagi Anda </h2>
-            <h3>
+            <h4>
                 Harga 1 Kg 
                 <del>Rp. 35.000</del> <br/>Nah sekarang <strong>Rp. 25.000</strong> saja
                 <br/>
                 Gimana? Tertarik !
-            </h3>
+            </h4>
         </div>
        <div class="center cod">
         <p>

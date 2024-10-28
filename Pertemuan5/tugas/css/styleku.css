@@ -1,0 +1,126 @@
+/* style.css */
+body {
+     font-family: Arial, sans-serif;
+     line-height: 1.6;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ #header {
+     background-color: #f0f8ff;
+     padding: 20px;
+     text-align: center;
+ }
+ 
+ blockquote {
+     background-color: #f5f5dc;
+     padding: 10px;
+     border-left: 1px dotted #8b4513;
+     border-top: 1px dotted #8b4513;
+     margin: 20px auto;
+     width: 70%;
+     font-style: italic;
+ }
+ 
+ #header h1 {
+     font-size: 24px;
+     margin: 0;
+ }
+ 
+ #header #soekarno {
+     font-size: 14px;
+     color: #333;
+     display: block;
+     text-align: right;
+     font-weight: bold;
+     margin-top: 5px;
+ }
+ 
+ul {
+     list-style-type: none;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     margin: auto;
+ }
+ 
+ul li {
+     display: flex;
+     margin: 0 15px;
+ }
+ 
+ul li a {
+     text-decoration: underline;
+     color: blue;
+     font-weight: bold;
+}
+ 
+ .gambar, .koleksi {
+     text-align: center;
+     margin: 20px auto;
+ }
+ 
+ .gambar img, .koleksi img {
+     max-width: 100%;
+     height: auto;
+     margin: 10px;
+ }
+ 
+ .isi p:first-child::first-letter {
+     color: blue;
+     font-size: 35px;
+     font-weight: bold;
+ }
+ 
+ .isi p {
+     margin: 10px auto;
+     width: 80%;
+     text-align: justify;
+ }
+ 
+ .isi .jawa {
+     font-weight: bold;
+     color: #444;
+ }
+ 
+ #profil, #beternak {
+     margin: 20px auto;
+     width: 80%;
+ }
+ 
+ #profil h3, #beternak h3 {
+     font-size: 22px;
+     color: #333;
+     margin-bottom: 10px;
+ }
+ 
+ .promo {
+     background-color: #ffe4b5;
+     padding: 20px;
+     text-align: center;
+     margin: 20px auto;
+     width: 80%;
+ }
+ 
+ .promo h2, .promo h3, .promo h4 {
+     margin: 10px 0;
+ }
+ 
+ .promo h2 strong {
+     color: red;
+     font-weight: bold;
+ }
+ 
+ .promo a {
+     color: blue;
+     font-weight: bold;
+     text-decoration: none;
+ }
+ 
+ .promo ol {
+     padding: 0;
+     list-style-position: inside;
+     text-align: left;
+     display: inline-block;
+ }
+ 

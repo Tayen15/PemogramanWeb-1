@@ -1,0 +1,36 @@
+.header {
+     background-color: green;
+     height: 50px;
+     width: 100%;
+     margin-bottom: 15px;
+}
+.container {
+     display: flex;
+}
+.left {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+.left .box {
+     background-color: yellow;
+     width: 200px;
+     height: 200px;
+}
+.right {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     margin-left: 20px;
+     flex-grow: 1;
+}
+.right .box1 {
+     background-color: orange;
+     width: 100%;
+     height: 200px;
+}
+.right .box2 {
+     background-color: blue;
+     width: 100%;
+     height: 200px;
+}

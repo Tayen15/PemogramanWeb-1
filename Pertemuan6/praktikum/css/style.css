@@ -1,0 +1,28 @@
+body {
+     margin-left: 50px;
+}
+
+.box {
+     width: 250px;
+     height: 600px;
+     float: left;
+     margin: 3px;
+     border: 1px solid black;
+   }
+
+.red {
+     background-color: red;
+}
+
+.yellow {
+     background-color: yellow;
+}
+
+.green {
+     background-color: green;
+}
+
+.blue {
+     background-color: blue;
+}
+   

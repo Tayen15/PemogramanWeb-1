@@ -1,0 +1,47 @@
+body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+ .header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 10px;
+ }
+ .header .logo {
+     height: 70px;
+     width: 200px;
+     background-color: aqua;
+ }
+ .header .menu {
+     display: flex;
+     background-color: orange;
+     height: 70px;
+     flex: 1;
+ }
+ .hero {
+     display: flex;
+     gap: 10px;
+ }
+ .sidebar {
+     background-color: green;
+     width: 200px;
+     height: 400px;
+ }
+ .main-content {
+     background-color: grey;
+     flex-grow: 1;
+ }
+ .extra-content {
+     background-color: blue;
+     width: 150px;
+ }
+ .footer {
+     background-color: blue;
+     height: 70px;
+     text-align: center;
+     color: white;
+}

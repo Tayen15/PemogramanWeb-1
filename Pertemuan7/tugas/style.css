@@ -29,7 +29,6 @@ header {
 
 article {
      grid-area: article;
-     background-color: lightgreen;
 }
 
 aside {

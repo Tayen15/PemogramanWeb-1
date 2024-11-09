@@ -1,0 +1,48 @@
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+body {
+     display: grid;
+     grid-template-areas: 
+         "nav header header"
+         "nav article aside"
+         "nav footer footer";
+     grid-template-rows: auto 1fr auto;
+     grid-template-columns: 200px 1fr 300px;
+     height: 100vh;
+}
+
+/* Styling tiap bagian layout */
+nav {
+     grid-area: nav;
+     background-color: pink;
+}
+
+header {
+     grid-area: header;
+     background-color: khaki;
+     height: 15vh;
+}
+
+article {
+     grid-area: article;
+     background-color: lightgreen;
+}
+
+aside {
+     grid-area: aside;
+     background-color: lightblue;
+}
+
+footer {
+     grid-area: footer;
+     background-color: yellow;
+     height: 10vh;
+}
+
+nav,header,article,aside,footer {
+     padding: 20px;
+}

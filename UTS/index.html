@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koperasi Tani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <a href="#" class="text-2xl font-bold text-green-600">Koperasi Tani</a>
+            <ul class="flex items-center space-x-6">
+                <li><a href="#" class="text-gray-700 hover:text-green-600">Home</a></li>
+                <li><a href="#profil" class="text-gray-700 hover:text-green-600">Profil</a></li>
+                <li><a href="#produk" class="text-gray-700 hover:text-green-600">Produk</a></li>
+                <li><a href="#form" class="text-gray-700 hover:text-green-600">Pesanan</a></li>
+                <li>
+                    <button id="loginBtn" class="text-green-600 border border-green-600 px-3 py-1 rounded-md hover:bg-green-600 hover:text-white transition duration-200">
+                        Login
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Modal Login -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg w-80 shadow-lg">
+            <h2 class="text-2xl font-bold mb-4">Login</h2>
+            <form id="loginForm">
+                <div class="mb-4">
+                    <label class="block text-sm font-semibold mb-2">Username</label>
+                    <input type="text" id="username" class="w-full px-4 py-2 border rounded-lg"
+                        placeholder="Masukkan Username" required>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold mb-2">Password</label>
+                    <input type="password" id="password" class="w-full px-4 py-2 border rounded-lg"
+                        placeholder="Masukkan Password" required>
+                </div>
+                <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg">Login</button>
+                <button type="button" id="closeModal"
+                    class="w-full bg-gray-600 text-white py-2 rounded-lg mt-2">Batal</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-cover bg-center"
+        style="background-image: url('https://wallpaperaccess.com/full/2189946.jpg');">
+        <!-- Overlay Hijau Transparan -->
+        <div class="absolute inset-0 bg-green-900 bg-opacity-60"></div>
+
+        <!-- Konten Hero -->
+        <div class="container mx-auto flex flex-col items-center justify-center h-full text-center relative text-white">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
+                Selamat Datang di Koperasi Petani
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl">
+                Kami membantu petani menjual hasil tani terbaik langsung kepada konsumen dengan harga yang adil dan
+                transparan.
+            </p>
+            <a href="#produk"
+                class="bg-green-700 hover:bg-green-800 text-white font-semibold px-10 py-4 rounded-full shadow-lg">
+                Lihat Produk Kami
+            </a>
+        </div>
+    </section>
+
+    <!-- Profil Usaha dengan Media Sosial -->
+    <section id="profil" class="bg-gray-100 py-20">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <img src="img/profile-koperasi.png" alt="Profil Usaha" class="w-full md:w-5/12 rounded-lg shadow-lg">
+            <div class="md:ml-10">
+                <h2 class="text-3xl font-bold text-green-600 mb-4">Tentang Koperasi Kami</h2>
+                <p class="text-gray-700 mb-6">
+                    Koperasi Penjualan Petani membantu para petani menjual produk mereka
+                    langsung ke pasar, memberikan harga yang adil bagi konsumen dan petani.
+                </p>
+                <!-- Tombol Lihat Produk -->
+                <a href="#produk" class="bg-green-600 text-white px-6 py-3 rounded-lg mb-4 inline-block">
+                    Lihat Produk Kami
+                </a>
+                <!-- Ikon Media Sosial -->
+                <div class="flex justify-start space-x-4 mt-4">
+                    <a href="https://facebook.com" class="text-green-600 hover:text-green-800" target="_blank">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://instagram.com" class="text-green-600 hover:text-green-800" target="_blank">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://whatsapp.com" class="text-green-600 hover:text-green-800" target="_blank">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabel Harga Produk -->
+    <section id="produk" class="py-20">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-green-600 mb-10">Harga Produk Kami</h2>
+            <div class="overflow-x-auto">
+                <table id="productTable" class="table-auto w-full bg-white shadow-lg">
+                    <thead class="bg-green-600 text-white">
+                        <tr>
+                            <th class="px-4 py-2">Nama Produk</th>
+                            <th class="px-4 py-2">Harga per Kg</th>
+                            <th class="px-4 py-2">Stok</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTableBody">
+                        <!-- Data akan diisi secara dinamis -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Pesanan -->
+    <section id="form" class="bg-gray-100 py-20">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-green-600 mb-8">Form Pesanan</h2>
+            <form id="orderForm" class="max-w-lg mx-auto bg-white p-8 shadow-lg rounded-lg">
+                <div class="mb-4">
+                    <label class="block text-gray-700">Nama Produk</label>
+                    <select id="productSelect" class="w-full px-4 py-2 border rounded-lg">
+                        <!-- Opsi akan diisi secara dinamis -->
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Jumlah</label>
+                    <input id="orderQuantity" type="number" placeholder="Jumlah (Kg)" class="w-full px-4 py-2 border rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Nama Pemesan</label>
+                    <input id="customerName" type="text" placeholder="Nama Anda" class="w-full px-4 py-2 border rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Nomor Telepon</label>
+                    <input id="customerPhone" type="text" placeholder="Nomor Telepon" class="w-full px-4 py-2 border rounded-lg">
+                </div>
+                <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg w-full">Kirim Pesanan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Slider Gambar -->
+    <section class="bg-white py-10">
+        <div class="container mx-auto">
+            <div class="relative">
+                <div class="overflow-hidden">
+                    <div class="flex slider">
+                        <img src="img/slider-1.jpg" class="w-auto h-[224px] max-w-full object-cover object-center mx-auto">
+                        <img src="img/slider-2.jpg" class="w-auto h-[224px] max-w-full object-cover object-center mx-auto">
+                        <img src="img/slider-3.jpg" class="w-auto h-[224px] max-w-full object-cover object-center mx-auto">
+                    </div>
+                </div>
+                <button
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-2 rounded-full"><i class="fa-solid fa-arrow-left"></i></button>
+                <button
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-green-600 text-white p-2 rounded-full"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Profil Pengembang) -->
+    <footer class="bg-green-600 text-white py-6">
+        <div class="container mx-auto flex flex-col items-center space-y-4">
+            <!-- Foto Profil Pengembang -->
+            <img src="img/profile-dev.jpg" alt="Foto Profil Firtiansyah Okta Resama" class="w-24 h-24 rounded-full shadow-lg">
+    
+            <!-- Link Sosial Media -->
+            <div class="flex space-x-4">
+                <a href="https://linkedin.com/in/firtiansyahokta" class="text-white hover:text-gray-400" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/Tayen15" class="text-white hover:text-gray-400" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="mailto:tianresama@gmail.com" class="text-white hover:text-gray-400" target="_blank">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </div>
+
+            <!-- Informasi Pengembang -->
+            <p class="text-center">
+                Dikembangkan oleh <strong>Firtiansyah Okta Resama</strong>
+            </p>
+            <p class="text-center">
+                &copy; 2024 Koperasi Tani. All right reserved.
+            </p>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>

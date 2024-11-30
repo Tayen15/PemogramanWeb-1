@@ -4,12 +4,19 @@ Welcome to the project documentation. Below you'll find a list of all available 
 
 
 
+
 ## 📄 Available Routes
 
-*Last updated: 2024-11-23 06:12 UTC*
+*Last updated: 2024-11-30 03:36 UTC*
 
 Browse through our available pages:
 
+
+### 📁 Pertemuan10
+
+- [📄 Chat Js](https://tayen15.github.io/PemogramanWeb-1/Pertemuan10/chat-js)
+- [📍 Pertemuan10](https://tayen15.github.io/PemogramanWeb-1/Pertemuan10/index)
+- [📄 Login Js](https://tayen15.github.io/PemogramanWeb-1/Pertemuan10/login-js)
 
 ### 📁 Pertemuan2
 
@@ -70,12 +77,12 @@ Browse through our available pages:
 
 - [📍 Pertemuan7/tugas](https://tayen15.github.io/PemogramanWeb-1/Pertemuan7/tugas/index)
 
-### 📁 Praktikum9
+### 📁 Pertemuan9
 
-- [📄 Navbar](https://tayen15.github.io/PemogramanWeb-1/Praktikum9/navbar)
-- [📄 No1](https://tayen15.github.io/PemogramanWeb-1/Praktikum9/no1)
-- [📄 No2](https://tayen15.github.io/PemogramanWeb-1/Praktikum9/no2)
-- [📄 No3](https://tayen15.github.io/PemogramanWeb-1/Praktikum9/no3)
+- [📄 Navbar](https://tayen15.github.io/PemogramanWeb-1/Pertemuan9/navbar)
+- [📄 No1](https://tayen15.github.io/PemogramanWeb-1/Pertemuan9/no1)
+- [📄 No2](https://tayen15.github.io/PemogramanWeb-1/Pertemuan9/no2)
+- [📄 No3](https://tayen15.github.io/PemogramanWeb-1/Pertemuan9/no3)
 
 ### 📁 UTS
 
@@ -83,6 +90,6 @@ Browse through our available pages:
 
 ---
 
-📊 **Stats**: 28 page(s) in 14 folder(s)
+📊 **Stats**: 31 page(s) in 15 folder(s)
 
 💡 *Routes are automatically updated when pages are added or removed.*

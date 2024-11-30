@@ -42,7 +42,7 @@ jobs:
             
             # Add routes header with timestamp
             echo -e "\n## 📄 Available Routes\n"
-            echo -e "*Last updated: $(TZ=Asia/Jakarta date "+%W, %H:%M %Y-%m-%d WIB")*\n"
+            echo -e "*Last updated: $(TZ=Asia/Jakarta date "+%a, %H:%M %d-%m-%Y WIB")*\n"
 
             if [ -z "$files" ]; then
               echo "🚧 No pages available yet."

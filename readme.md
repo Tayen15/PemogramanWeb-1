@@ -2,9 +2,10 @@
 
 Welcome to the project documentation. Below you'll find a list of all available pages.
 
+
 ## 📄 Available Routes
 
-*Last updated: 2024-11-23 04:45 UTC*
+*Last updated: 2024-11-23 06:10 UTC*
 
 Browse through our available pages:
 
@@ -74,7 +75,6 @@ Browse through our available pages:
 - [📄 No1](https://tayen15.github.io/PemogramanWeb-1/Praktikum9/no1)
 - [📄 No2](https://tayen15.github.io/PemogramanWeb-1/Praktikum9/no2)
 - [📄 No3](https://tayen15.github.io/PemogramanWeb-1/Praktikum9/no3)
-- [📄 No4](https://tayen15.github.io/PemogramanWeb-1/Praktikum9/no4)
 
 ### 📁 UTS
 
@@ -82,6 +82,6 @@ Browse through our available pages:
 
 ---
 
-📊 **Stats**: 29 page(s) in 14 folder(s)
+📊 **Stats**: 28 page(s) in 14 folder(s)
 
 💡 *Routes are automatically updated when pages are added or removed.*

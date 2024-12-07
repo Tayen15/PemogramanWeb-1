@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Image Picker</title>
+     <script>
+          function tampilkanGambar() {
+               let gambar = document.getElementById("gambar").value;
+               let imgElement = document.getElementById("imgDisplay");
+               let namaFile;
+
+               switch(gambar) {
+                    case "gambar1.jpg":
+                         namaFile = "Gambar 1";
+                         break;
+                    case "gambar2.jpg":
+                         namaFile = "Gambar 2";
+                         break;
+                    case "gambar3.jpg":
+                         namaFile = "Gambar 3";
+                         break;
+                    case "gambar4.jpg":
+                         namaFile = "Gambar 4";
+                         break;
+                    case "gambar5.jpg":
+                         namaFile = "Gambar 5";
+                         break;
+                    case "gambar6.jpg":
+                         namaFile = "Gambar 6";
+                         break;
+                    default:
+                         namaFile = "Tidak ada gambar yang dipilih";
+               }
+
+               imgElement.src = gambar;
+          }
+     </script>
+</head>
+<body>
+     <h1>Image Picker</h1>
+     <form>
+          <label for="gambar">Pilih Gambar:</label>
+          <select id="gambar" name="gambar" onchange="tampilkanGambar()">
+               <option disabled selected value="">--Pilih Gambar--</option>
+               <option value="img/gambar1.jpg">Gambar 1</option>
+               <option value="img/gambar2.jpg">Gambar 2</option>
+               <option value="img/gambar3.jpg">Gambar 3</option>
+               <option value="img/gambar4.jpg">Gambar 4</option>
+          </select>
+     </form>
+     <div>
+          <img id="imgDisplay" src="" alt="Gambar akan ditampilkan di sini" style="margin-top: 20px; max-width: 50%;">
+     </div>
+</body>
+</html>

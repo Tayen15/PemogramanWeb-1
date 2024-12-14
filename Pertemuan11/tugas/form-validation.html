@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Form Validation</title>
+     <style>
+          .error {
+               color: red;
+          }
+     </style>
+     <script>
+          function validateForm() {
+               let isValid = true;
+
+               let nama = document.getElementById("nama").value;
+               if (nama === "" || nama.length > 30) {
+                    document.getElementById("namaError").innerText = "Nama harus diisi dan maksimal 30 karakter";
+                    isValid = false;
+               } else {
+                    document.getElementById("namaError").innerText = "";
+               }
+
+               let email = document.getElementById("email").value;
+               let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+               if (email === "" || !emailPattern.test(email)) {
+                    document.getElementById("emailError").innerText = "Email harus diisi dan format email harus valid";
+                    isValid = false;
+               } else {
+                    document.getElementById("emailError").innerText = "";
+               }
+
+               let jam = document.getElementById("jam").value;
+               let jamPattern = /^([01]\d|2[0-3]):([0-5]\d)$/;
+               if (jam === "" || !jamPattern.test(jam)) {
+                    document.getElementById("jamError").innerText = "Jam keberangkatan harus diisi dan format jam harus valid (00.00 - 23.59)";
+                    isValid = false;
+               } else {
+                    document.getElementById("jamError").innerText = "";
+               }
+
+               let tujuan = document.getElementById("tujuan").value;
+               if (tujuan === "") {
+                    document.getElementById("tujuanError").innerText = "Tujuan keberangkatan harus diisi";
+                    isValid = false;
+               } else {
+                    document.getElementById("tujuanError").innerText = "";
+               }
+
+               let tiket = document.getElementById("tiket").value;
+               if (tiket === "" || isNaN(tiket) || tiket < 1 || tiket > 10) {
+                    document.getElementById("tiketError").innerText = "Jumlah tiket harus diisi dan harus bilangan bulat antara 1 - 10";
+                    isValid = false;
+               } else {
+                    document.getElementById("tiketError").innerText = "";
+               }
+
+               if (isValid) {
+                    document.getElementById("output").innerHTML = `
+                         <h3>Data Pelanggan</h3>
+                         <p>Nama Pelanggan: ${nama}</p>
+                         <p>Email: ${email}</p>
+                         <p>Jam Keberangkatan: ${jam}</p>
+                         <p>Tujuan Keberangkatan: ${tujuan}</p>
+                         <p>Jumlah Tiket: ${tiket}</p>
+                    `;
+               }
+
+               return isValid;
+          }
+     </script>
+</head>
+<body>
+     <h1>Form Validasi</h1>
+     <form onsubmit="return validateForm()">
+          <label for="nama">Nama Pelanggan:</label>
+          <input type="text" id="nama" name="nama">
+          <span id="namaError" class="error"></span><br><br>
+
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email">
+          <span id="emailError" class="error"></span><br><br>
+
+          <label for="jam">Jam Keberangkatan:</label>
+          <input type="text" id="jam" name="jam">
+          <span id="jamError" class="error"></span><br><br>
+
+          <label for="tujuan">Tujuan Keberangkatan:</label>
+          <input type="text" id="tujuan" name="tujuan">
+          <span id="tujuanError" class="error"></span><br><br>
+
+          <label for="tiket">Jumlah Tiket:</label>
+          <input type="text" id="tiket" name="tiket">
+          <span id="tiketError" class="error"></span><br><br>
+
+          <input type="submit" value="Submit">
+     </form>
+
+     <div id="output"></div>
+</body>
+</html>

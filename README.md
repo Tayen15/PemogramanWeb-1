@@ -12,9 +12,10 @@ Welcome to the project documentation. Below you'll find a list of all available 
 
 
 
+
 ## 📄 Available Routes
 
-*Last updated: Sat, 10:55 07-12-2024 WIB*
+*Last updated: Sat, 08:13 14-12-2024 WIB*
 
 Browse through our available pages:
 
@@ -25,11 +26,15 @@ Browse through our available pages:
 - [📍 Pertemuan10](https://tayen15.github.io/PemogramanWeb-1/Pertemuan10/index)
 - [📄 Login Js](https://tayen15.github.io/PemogramanWeb-1/Pertemuan10/login-js)
 
-### 📁 Pertemuan11
+### 📁 Pertemuan11/praktikum
 
-- [📄 Image](https://tayen15.github.io/PemogramanWeb-1/Pertemuan11/image)
-- [📄 Kalkulator](https://tayen15.github.io/PemogramanWeb-1/Pertemuan11/kalkulator)
-- [📄 Kurs](https://tayen15.github.io/PemogramanWeb-1/Pertemuan11/kurs)
+- [📄 Image](https://tayen15.github.io/PemogramanWeb-1/Pertemuan11/praktikum/image)
+- [📄 Kalkulator](https://tayen15.github.io/PemogramanWeb-1/Pertemuan11/praktikum/kalkulator)
+- [📄 Kurs](https://tayen15.github.io/PemogramanWeb-1/Pertemuan11/praktikum/kurs)
+
+### 📁 Pertemuan11/tugas
+
+- [📄 Form Validation](https://tayen15.github.io/PemogramanWeb-1/Pertemuan11/tugas/form-validation)
 
 ### 📁 Pertemuan2
 
@@ -103,6 +108,6 @@ Browse through our available pages:
 
 ---
 
-📊 **Stats**: 34 page(s) in 16 folder(s)
+📊 **Stats**: 35 page(s) in 17 folder(s)
 
 💡 *Routes are automatically updated when pages are added or removed.*

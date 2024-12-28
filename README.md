@@ -3,9 +3,10 @@
 Welcome to the project documentation. Below you'll find a list of all available pages.
 
 
+
 ## 📄 Available Routes
 
-*Last updated: Thu, 14:13 26-12-2024 WIB*
+*Last updated: Sat, 11:36 28-12-2024 WIB*
 
 Browse through our available pages:
 
@@ -37,6 +38,14 @@ Browse through our available pages:
 ### 📁 Pertemuan13
 
 - [📍 Pertemuan13](https://tayen15.github.io/PemogramanWeb-1/Pertemuan13/index)
+
+### 📁 Pertemuan14
+
+- [📍 Pertemuan14](https://tayen15.github.io/PemogramanWeb-1/Pertemuan14/index)
+
+### 📃 Pertemuan14/pages
+
+- [📄 About](https://tayen15.github.io/PemogramanWeb-1/Pertemuan14/pages/about)
 
 ### 📁 Pertemuan2
 
@@ -110,6 +119,6 @@ Browse through our available pages:
 
 ---
 
-📊 **Stats**: 38 page(s) in 20 folder(s)
+📊 **Stats**: 40 page(s) in 22 folder(s)
 
 💡 *Routes are automatically updated when pages are added or removed.*
